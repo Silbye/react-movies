@@ -5,7 +5,7 @@ export default function Search() {
     <section className="search">
       <div className="container">
         <div className="search-box">
-          <input type="text" placeholder="Поиск по объявлениям" />
+          <input type="text" placeholder="Что хотите посмотреть?" />
           <button>
             <img src="img/search.svg" alt="search" />
             <span>найти</span>

@@ -1,45 +1,94 @@
-.content-item {
+.content-film {
+  flex-grow: 1;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.content-film__img {
+  width: calc((100% - 28px) / 2);
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+    display: block;
+    max-width: 450px;
+  }
+}
+
+.content-film__info {
+  width: calc((100% - 28px) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
 }
 
-.content-item__title {
-  color: #0a143a;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
+.content-film__info__content > *:last-child {
+  margin-bottom: 0;
 }
 
-.content-item__image {
-  margin-bottom: 20px;
-  width: 100%;
+.content-film__info__title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  h1,
+  p {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  h1 {
+    font-weight: 700;
+  }
+  p {
+    font-weight: 400;
+  }
 }
 
-.content-item__description {
-  color: #0a143a;
-  font-size: 14px;
-  line-height: 140%;
+.content-film__info__desc {
+  font-size: 16px;
   font-weight: 400;
+  line-height: 19px;
+  color: #868686;
+  margin-bottom: 2px;
 }
 
-.content-item--left {
-  max-width: 460px;
+.content-film__info__rating {
+  color: #04a31e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin-bottom: 29px;
 }
 
-.content-item--right {
-  min-width: 264px;
+.content-film__info__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #000;
+  margin-bottom: 18px;
 }
 
-.content-item--right button {
-  padding: 19px 71.5px;
+.content-film__info__controls {
+  button {
+    font-style: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    padding: 16px 98px;
+    border-radius: 5px;
+  }
 }
 
-@media (max-width: 991px) {
-  .content-item {
-    display: flex;
+@media screen and (max-width: 991px) {
+  .content-film {
     flex-direction: column;
-    gap: 30px;
+  }
+
+  .content-film__img {
+    width: 100%;
+  }
+
+  .content-film__info {
+    width: 100%;
   }
 }

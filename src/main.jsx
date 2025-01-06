@@ -13,11 +13,10 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/article/:id",
+    path: "/film/:id",
     element: <Item />,
   },
   { path: "*", element: <Home /> },
-  { basename: "/react-marketplace" },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

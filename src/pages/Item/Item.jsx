@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import Search from "../../components/Search/Search";
-import { articles } from "../../data/articles";
+import { films } from "../../data/films";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
 import "./Item.css";
 
 export default function Item() {
   const { id } = useParams();
-  const findArticle = articles.find((p) => p.id === Number(id));
+  const findArticle = films.find((p) => p.id === Number(id));
 
   return (
     <main>
@@ -15,22 +15,28 @@ export default function Item() {
       <section className="content">
         <div className="container">
           <div className="content-box">
-            <div className="content-main">
-              <div className="content-item">
-                <div className="content-item--left">
-                  <h2 className="content-item__title">{findArticle.title}</h2>
-                  <img
-                    src={findArticle.imageSmall}
-                    alt=""
-                    className="content-item__image"
-                  />
-                  <p className="content-item__description">
-                    {findArticle.desc}
+            <div className="content-film">
+              <div className="content-film__img">
+                <img src={findArticle.image} alt={findArticle.title} />
+              </div>
+              <div className="content-film__info">
+                <div className="content-film__info__content">
+                  <div className="content-film__info__title">
+                    <h1>{findArticle.title},</h1>
+                    <p>{findArticle.original}</p>
+                  </div>
+                  <p className="content-film__info__desc">
+                    {findArticle.category}
+                  </p>
+                  <p className="content-film__info__rating">
+                    {findArticle.rating}
+                  </p>
+                  <p className="content-film__info__text">
+                    {findArticle.description}
                   </p>
                 </div>
-                <div className="content-item--right">
-                  <h2 className="content-item__title">{findArticle.price} ₽</h2>
-                  <button>Показать телефон</button>
+                <div className="content-film__info__controls">
+                  <button>Смотреть</button>
                 </div>
               </div>
             </div>

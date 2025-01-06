@@ -1,10 +1,10 @@
 import Sidebar from "../../components/Sidebar/Sidebar";
-import ArticleCard from "../../components/ArticleCard/ArticleCard";
+import MovieCard from "../../components/MovieCard/MovieCard";
 import Search from "../../components/Search/Search";
 
 import "./Home.css";
 
-import { articles } from "../../data/articles";
+import { films } from "../../data/films";
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
             <div className="content-main">
               <h2 className="content-main__title">Рекомендации для вас</h2>
               <div className="content-cards">
-                {articles.map((article) => (
-                  <ArticleCard key={article.id} article={article} />
+                {films.map((article) => (
+                  <MovieCard key={article.id} article={article} />
                 ))}
               </div>
             </div>

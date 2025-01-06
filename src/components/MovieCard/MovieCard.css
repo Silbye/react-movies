@@ -13,19 +13,22 @@
 }
 
 .content-cards__item--title {
-  margin-bottom: 5px;
-  color: #256eeb;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 700;
-}
-
-.content-cards__item--price {
-  color: #0a143a;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+  h5,
+  span {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+  h5 {
+    font-weight: 700;
+  }
+  span {
+    font-weight: 400;
+  }
 }
 
 .content-cards__item--description {
@@ -33,7 +36,14 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
-  margin-bottom: 4px;
+  margin-bottom: 11px;
+}
+
+.content-cards__item--rating {
+  color: #04a31e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
 }
 
 @media (max-width: 991px) {

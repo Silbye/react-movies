@@ -1,46 +1,23 @@
 * {
+  font-family: Inter, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
-  list-style: none;
-}
-
-body {
-  font-family: sans-serif;
+  list-style-type: none;
 }
 
 button {
   color: #fff;
-  padding: 10px 15px;
-  background-color: #256eeb;
-  border-radius: 5px;
   cursor: pointer;
+  background-color: #ff4949;
   border: none;
   outline: none;
 }
 
 .container {
   width: 100%;
-  max-width: 1170px;
-  padding: 0 12px;
+  max-width: 1149px;
+  padding: 0 24px;
   margin: 0 auto;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    max-width: 930px;
-  }
-}
-
-@media (max-width: 991px) {
-  .container {
-    max-width: 730px;
-  }
-}
-
-@media (max-width: 786px) {
-  .container {
-    max-width: 100%;
-  }
 }
